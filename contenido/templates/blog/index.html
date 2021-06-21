@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for contenido in contenidos %}
+        <div class="box">
+            <section>
+                <div>
+                    <p class="title">{{ contenido.nombre }}</p>
+                </div>
+            </section>
+
+            <div class="content">
+                <p>{{ post.intro }}</p>
+
+                <a href="{% url 'detail' contenido.id %}">Texto completo</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% load blog_extras %}
+
+{% block content %}
+    <div class>
+        <section>
+            <div class>
+                <p class="title">{{ contenido.nombre }}</p>
+                <p class="subtitle">{{ contenido.autor }}</p>
+                <p class = "content">{{ content.texto}}</p>
+            </div>
+        </section>
+        <div class="content">
+            {{ contenido.texto|convert_markdown|safe }}
+        </div>
+    </div>
+{% endblock %}
